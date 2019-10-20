@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+double RingS(double R1, double R2)
+{
+	return 3.14 * pow(R1, 2) - 3.14 * pow(R2, 2);
+}
+int main() 
+{
+     double R1, R2;
+
+	setlocale(0, "");
+	int i = 0;
+	double X=0;
+		while (i < 3)
+		{
+			cout << "Введите R1: " << endl;
+			cin >> R1;
+			cout << "Введите R2: " << endl;
+			cin >> R2;
+			if (R1 > R2)
+			{
+				cout << "Радиус кольца= " << RingS(R1,R2) << endl << endl;
+				i++;
+			}
+			else
+				cout << "Введены неверные данные!" << endl << endl;
+		}
+}
